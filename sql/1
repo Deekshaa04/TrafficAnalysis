@@ -1,0 +1,9 @@
+SELECT 
+    DATE(timestamp) AS date,
+    SUM(vehicle_count) AS total_vehicle_count
+FROM 
+    datavision.transformed_data
+GROUP BY 
+    DATE(timestamp)
+ORDER BY 
+    date;
